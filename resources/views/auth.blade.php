@@ -20,6 +20,7 @@
     <link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
     <link href="/static/assets/plugins/pace/pace.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
     <!-- Theme Styles -->
@@ -48,5 +49,28 @@
     <script src="/static/assets/plugins/pace/pace.min.js"></script>
     <script src="/static/assets/js/main.min.js"></script>
     <script src="/static/assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script type="text/javascript">
+        $("#registerBtn").on("click", function(){
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            axios.post("/auth/register/control", {name:name, email:email, password:password})
+            .then(response => {
+                toastr[response.data.type](response.data.message);
+                if(response.data.status){
+                    setInterval(() => {
+                        window.location.assign("/auth/login");
+                    }, 1000);
+                }
+            })
+        })
+    </script>
+
+
 </body>
 </html>

@@ -14,8 +14,8 @@
     <p class="auth-description">Hesap oluşturmak için aşağıdakli formu kullanabilirsin.<br>Zaten bir hesabın var mı? <a href="/auth/login">Oturum aç.</a></p>
 
     <div class="auth-credentials m-b-xxl">
-        <label for="username" class="form-label">Kullanıcı adı</label>
-        <input type="text" class="form-control m-b-md" id="username" placeholder="Kullanıcı adını oluştur">
+        <label for="name" class="form-label">Ad Soyad</label>
+        <input type="text" class="form-control m-b-md" id="name" placeholder=" Adınız Soyadınız">
 
         <label for="email" class="form-label">E-posta</label>
         <input type="email" class="form-control m-b-md" id="email" placeholder="E-posta adresini gir">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="auth-submit">
-        <a href="javascript:void(0)" class="btn btn-primary">Hesap Oluştur</a>
+        <a href="javascript:void(0)" class="btn btn-primary" id="registerBtn">Hesap Oluştur</a>
     </div>
     <div class="divider"></div>
     <p class="text-muted">Copyright 2023 - Tüm hakları saklıdır.</p>

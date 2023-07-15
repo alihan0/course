@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 
-use Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +22,6 @@ Route::get('/', [HomeController::class, 'home'])->middleware('auth');
 
 Route::get('/login', [AuthController::class, 'login'])->name("login")->prefix('auth');
 Route::get('/register', [AuthController::class, 'register'])->prefix('auth');
+Route::post('/register/control', [AuthController::class, 'register_control'])->prefix('auth');
+
+// TODO diğer derste bunları Route Group metoduyla değiştir.
