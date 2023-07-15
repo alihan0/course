@@ -21,3 +21,4 @@ use Auth;
 Route::get('/', [HomeController::class, 'home'])->middleware('auth');
 
 Route::get('/login', [AuthController::class, 'login'])->name("login")->prefix('auth');
+Route::get('/register', [AuthController::class, 'register'])->prefix('auth');
