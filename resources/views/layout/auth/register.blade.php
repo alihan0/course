@@ -9,31 +9,27 @@
 </div>
 <div class="app-auth-container">
     <div class="logo">
-        <a href="index.html">Neptune</a>
+        <a href="/">Neptune</a>
     </div>
-    <p class="auth-description">Please enter your credentials to create an account.<br>Already have an account? <a href="sign-in.html">Sign In</a></p>
+    <p class="auth-description">Hesap oluşturmak için aşağıdakli formu kullanabilirsin.<br>Zaten bir hesabın var mı? <a href="/auth/login">Oturum aç.</a></p>
 
     <div class="auth-credentials m-b-xxl">
-        <label for="signUpUsername" class="form-label">Username</label>
-        <input type="email" class="form-control m-b-md" id="signUpUsername" aria-describedby="signUpUsername" placeholder="Enter username">
+        <label for="username" class="form-label">Kullanıcı adı</label>
+        <input type="text" class="form-control m-b-md" id="username" placeholder="Kullanıcı adını oluştur">
 
-        <label for="signUpEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control m-b-md" id="signUpEmail" aria-describedby="signUpEmail" placeholder="example@neptune.com">
+        <label for="email" class="form-label">E-posta</label>
+        <input type="email" class="form-control m-b-md" id="email" placeholder="E-posta adresini gir">
 
-        <label for="signUpPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="signUpPassword" aria-describedby="signUpPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-        <div id="emailHelp" class="form-text">Password must be minimum 8 characters length*</div>
+        <label for="password" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="password" placeholder="Güçlü bir şifre belirle">
+        <div id="emailHelp" class="form-text">Şifren en az 8 karakterden oluşmalı.</div>
     </div>
 
     <div class="auth-submit">
-        <a href="#" class="btn btn-primary">Sign Up</a>
+        <a href="javascript:void(0)" class="btn btn-primary">Hesap Oluştur</a>
     </div>
     <div class="divider"></div>
-    <div class="auth-alts">
-        <a href="#" class="auth-alts-google"></a>
-        <a href="#" class="auth-alts-facebook"></a>
-        <a href="#" class="auth-alts-twitter"></a>
-    </div>
+    <p class="text-muted">Copyright 2023 - Tüm hakları saklıdır.</p>
 </div>
 
 @endsection

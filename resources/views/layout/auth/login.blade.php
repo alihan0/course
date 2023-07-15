@@ -11,7 +11,7 @@
     <div class="logo">
         <a href="index.html">Neptune</a>
     </div>
-    <p class="auth-description">Please sign-in to your account and continue to the dashboard.<br>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+    <p class="auth-description">Devam edebilmek için lütfen oturum aç. Bir hesabın yok mu?<a href="/auth/register">Ücretsiz Hesap Oluştur</a></p>
 
     <div class="auth-credentials m-b-xxl">
         <label for="signInEmail" class="form-label">Email address</label>
