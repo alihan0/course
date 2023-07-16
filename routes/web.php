@@ -20,10 +20,14 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [HomeController::class, 'home'])->middleware('auth');
 
-Route::get('/login', [AuthController::class, 'login'])->name("login")->prefix('auth');
-Route::get('/register', [AuthController::class, 'register'])->prefix('auth');
-Route::post('/register/control', [AuthController::class, 'register_control'])->prefix('auth');
-Route::post('/login/control', [AuthController::class, 'login_control'])->prefix('auth');
-Route::get('/logout', [AuthController::class, 'logout'])->prefix('auth');
+
 
 // TODO diğer derste bunları Route Group metoduyla değiştir.
+
+Route::controller(AuthController::class)->prefix('auth')->group(function(){
+    Route::get('/login', 'login')->name('login');
+    Route::post('/login/control', 'login_control');
+    Route::get('/register', 'register');
+    Route::post('/register/control', 'register_control');
+    Route::get('/logout', 'logout');
+});
