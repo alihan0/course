@@ -18,12 +18,13 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])->middleware('auth');
+// HOME CONTROLLER ROTA GRUBU
+Route::controller(HomeController::class)->middleware('auth')->group(function(){
+    Route::get('/', 'home');
+});
 
 
-
-// TODO diğer derste bunları Route Group metoduyla değiştir.
-
+// AUTH ROTA GRUBU
 Route::controller(AuthController::class)->prefix('auth')->group(function(){
     Route::get('/login', 'login')->name('login');
     Route::post('/login/control', 'login_control');
