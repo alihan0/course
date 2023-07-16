@@ -68,6 +68,15 @@
                     }, 1000);
                 }
             })
+        });
+
+
+        $("#loginBtn").on("click", function(){
+            var formData = $("#loginForm").serialize();
+
+            axios.post("/auth/login/control", formData).then(response => {
+                console.log(response);
+            })
         })
     </script>
 

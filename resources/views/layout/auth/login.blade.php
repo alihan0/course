@@ -24,7 +24,7 @@
     </div>
 
     <div class="auth-submit">
-        <a href="javascript:void(0)" class="btn btn-primary">Oturum Aç</a>
+        <a href="javascript:void(0)" class="btn btn-primary" id="loginBtn">Oturum Aç</a>
         <a href="/auth/forget-password" class="auth-forgot-password float-end">Şifreni mi unuttun?</a>
     </div>
     <div class="divider"></div>
