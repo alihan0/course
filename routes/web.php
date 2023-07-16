@@ -24,5 +24,6 @@ Route::get('/login', [AuthController::class, 'login'])->name("login")->prefix('a
 Route::get('/register', [AuthController::class, 'register'])->prefix('auth');
 Route::post('/register/control', [AuthController::class, 'register_control'])->prefix('auth');
 Route::post('/login/control', [AuthController::class, 'login_control'])->prefix('auth');
+Route::get('/logout', [AuthController::class, 'logout'])->prefix('auth');
 
 // TODO diğer derste bunları Route Group metoduyla değiştir.

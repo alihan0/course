@@ -75,7 +75,12 @@
             var formData = $("#loginForm").serialize();
 
             axios.post("/auth/login/control", formData).then(response => {
-                console.log(response);
+                toastr[response.data.type](response.data.message);
+                if(response.data.status){
+                    setInterval(() => {
+                        window.location.assign('/');
+                    }, 1000);
+                }
             })
         })
     </script>
