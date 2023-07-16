@@ -9,27 +9,25 @@
 </div>
 <div class="app-auth-container">
     <div class="logo">
-        <a href="index.html">Neptune</a>
+        <a href="/">Neptune</a>
     </div>
-    <p class="auth-description">Devam edebilmek için lütfen oturum aç. Bir hesabın yok mu?<a href="/auth/register">Ücretsiz Hesap Oluştur</a></p>
+    <p class="auth-description">Devam edebilmek için lütfen oturum aç.<br> Bir hesabın yok mu? <a href="/auth/register">Ücretsiz Hesap Oluştur</a></p>
 
     <div class="auth-credentials m-b-xxl">
-        <label for="signInEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control m-b-md" id="signInEmail" aria-describedby="signInEmail" placeholder="example@neptune.com">
+        <form action="javascript:void(0)" id="loginForm">
+            <label for="email" class="form-label">E-posta Adresiniz</label>
+            <input type="email" class="form-control m-b-md" id="email" name="email" placeholder="E-posta adresinizi girin">
 
-        <label for="signInPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="signInPassword" aria-describedby="signInPassword" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+            <label for="password" class="form-label">Şifreniz</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Şifrenizi Girin">
+        </form>
     </div>
 
     <div class="auth-submit">
-        <a href="#" class="btn btn-primary">Sign In</a>
-        <a href="#" class="auth-forgot-password float-end">Forgot password?</a>
+        <a href="javascript:void(0)" class="btn btn-primary">Oturum Aç</a>
+        <a href="/auth/forget-password" class="auth-forgot-password float-end">Şifreni mi unuttun?</a>
     </div>
     <div class="divider"></div>
-    <div class="auth-alts">
-        <a href="#" class="auth-alts-google"></a>
-        <a href="#" class="auth-alts-facebook"></a>
-        <a href="#" class="auth-alts-twitter"></a>
-    </div>
+    <p class="text-muted">Copyright 2023 - Tüm hakları saklıdır.</p>
 </div>
 @endsection
