@@ -873,10 +873,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.05);
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
 }
 
 .app-sidebar .logo {
@@ -884,20 +880,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 45px 28px;
     position: relative;
     background-color: #f5f7fa;
-    -webkit-transition: opacity .2s ease-in-out;
-    -moz-transition: opacity .2s ease-in-out;
-    -o-transition: opacity .2s ease-in-out;
-    transition: opacity .2s ease-in-out;
+
 }
 
 .app-sidebar .logo-icon .logo-text {
     color: #40475c;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
 }
 
 .app-sidebar .logo .logo-icon {
@@ -920,20 +907,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: all .2s ease-in-out;
 }
 
-.app-sidebar .logo .logo-icon:hover {
-    padding-left: 55px;
-}
 
-.app-sidebar .logo .logo-icon:hover .logo-text {
-    visibility: visible;
-    opacity: 1;
-}
 
-.app-sidebar .logo .logo-icon:hover+.sidebar-user-switcher {
-    margin-right: -10px;
-    visibility: hidden;
-    opacity: 0;
-}
+
 
 .app-sidebar .logo .sidebar-user-switcher {
     float: right;
