@@ -1,1 +1,9 @@
 /* Your Custom CSS Goes here */
+
+.course-card{
+    cursor: pointer;
+}
+
+.course-card:hover > .course-button{
+    display: inline-flex !important;
+}

@@ -69,5 +69,13 @@
     <script src="/static/assets/js/main.min.js"></script>
     <script src="/static/assets/js/custom.js"></script>
     <script src="/static/assets/js/pages/dashboard.js"></script>
+    <script>
+        /*
+        $(".course-card").on("mouseenter", function(){
+            $(".course-button").removeClass('d-none');
+        }).on("mouseleave", function(){
+            $(".course-button").addClass('d-none');
+        })
+    </script>
 </body>
 </html>
