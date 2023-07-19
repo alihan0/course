@@ -17,6 +17,7 @@ class CourseController extends Controller
     }
 
     public function detail($id){
-        echo $id;
+        $course = Courses::find($id);
+        return view('layout.course.detail', ['course' => $course]);
     }
 }
