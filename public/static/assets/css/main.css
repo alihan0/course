@@ -6071,7 +6071,7 @@ span.flatpickr-weekday {
 
 @media (min-width: 1200px) {
     .todo-container {
-        height: calc(100vh - 160px);
+       
         margin-bottom: 0!important;
     }
 
@@ -6135,15 +6135,15 @@ span.flatpickr-weekday {
 
 .todo-list {
     margin: 25px 25px 25px 0;
-    height: calc(100% - 50px);
-    overflow-y: auto;
+
+
 }
 
 @media (max-width: 1199px) {
     .todo-list {
         margin: 25px;
-        height: auto;
-        overflow-y: auto;
+
+
     }
 }
 

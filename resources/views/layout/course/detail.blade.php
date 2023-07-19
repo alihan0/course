@@ -26,6 +26,7 @@
                         <h1>{{$course->name}}</h1>
                     </div>
                     <div class="page-description-actions">
+                        <a href="#" class="btn btn-danger"><i class="material-icons">favorite</i>Beğen</a>
                         <a href="#" class="btn btn-primary"><i class="material-icons">add</i>Kayıt Ol</a>
                     </div>
                 </div>
@@ -112,7 +113,50 @@
                 </div>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col">
+                <div class="card todo-container">
+                    <div class="row">
+                       
+                        <div class="col-12">
+                            <div class="todo-list ps-5">
+                                <ul class="list-unstyled">
+                                    <li class="todo-item">
+                                        <div class="todo-item-content">
+                                            <span class="todo-item-title">Walk the dog<span class="badge badge-style-light rounded-pill badge-warning">other</span></span>
+                                            <span class="todo-item-subtitle">Donec ultricies est vel tellus molestie volutpat. Duis at cursus risus.</span>
+                                        </div>
+                                        
+                                    </li>
+                                    <li class="todo-item">
+                                        <div class="todo-item-content">
+                                            <span class="todo-item-title">Reply to new mails from support team<span class="badge badge-style-light rounded-pill badge-primary">work</span></span>
+                                            <span class="todo-item-subtitle">Vestibulum ipsum nunc, lacinia sit amet egestas vitae, molestie quis nisi. Maecenas mi urna, ultricies non est a, commodo suscipit velit. Nullam tincidunt, magna sed scelerisque varius</span>
+                                        </div>
+                                        
+                                    </li>
+                                    <li class="todo-item">
+                                        <div class="todo-item-content">
+                                            <span class="todo-item-title">Watch UX/UI design course<span class="badge badge-style-light rounded-pill badge-danger">education</span><span class="badge badge-style-bordered badge-primary">IN PROGRESS</span></span>
+                                            <span class="todo-item-subtitle">Vivamus pharetra massa vitae elit pellentesque, sit amet convallis purus euismod</span>
+                                        </div>
+                                        
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         
         
     </div>
