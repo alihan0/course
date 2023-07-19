@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\CourseController;
 
 
 /*
@@ -31,4 +31,9 @@ Route::controller(AuthController::class)->prefix('auth')->group(function(){
     Route::get('/register', 'register');
     Route::post('/register/control', 'register_control');
     Route::get('/logout', 'logout');
+});
+
+// Courses ROTA GRUBU
+Route::controller(CourseController::class)->prefix('courses')->group(function(){
+    Route::get('/', 'all');
 });
