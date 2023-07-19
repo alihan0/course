@@ -36,4 +36,5 @@ Route::controller(AuthController::class)->prefix('auth')->group(function(){
 // Courses ROTA GRUBU
 Route::controller(CourseController::class)->prefix('courses')->group(function(){
     Route::get('/', 'all');
+    Route::get('/detail/{id}', 'detail');
 });

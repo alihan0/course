@@ -32,7 +32,7 @@
             <div class="d-flex flex-row card-body border-top justify-content-center d-none course-button">
                 
                 <a href="javascript:void(0)" class="btn btn-primary card-link flex-1">Kayıt Ol</a>
-                <a href="/courses/{{$course->id}}" class="btn btn-primary card-link flex-1">Detay</a>
+                <a href="/courses/detail/{{$course->id}}" class="btn btn-primary card-link flex-1">Detay</a>
             </div>
           </div>
     </div>

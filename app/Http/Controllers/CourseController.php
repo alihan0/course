@@ -15,4 +15,8 @@ class CourseController extends Controller
 
         return view('layout.course.all', ["courses" => $courses]);
     }
+
+    public function detail($id){
+        echo $id;
+    }
 }
