@@ -2,8 +2,17 @@
 
 .course-card{
     cursor: pointer;
+    overflow: hidden;
 }
+.course-card img{
 
+    height:300px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+.course-button{
+ 
+}
 .course-card:hover > .course-button{
     display: inline-flex !important;
 }

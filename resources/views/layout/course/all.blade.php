@@ -12,22 +12,32 @@
     </div>
 </div>
 <div class="row">
+    
+    @foreach ($courses as $course)
+
+    @php
+        $tags = explode(',', $course->tags);
+    @endphp
+
     <div class="col-4">
         <div class="card course-card">
-            <img src="/static/assets/images/cards/card.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title text-center fs-4 ">Card title</h5>
-              <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <span class="" style="color:#d4d4d4">Etiket1, Etiket2, Etiket3</span>
+            <img src="{{$course->cover}}" class="card-img-top" alt="{{$course->name}}" title="{{$course->name}}">
+            <div class="card-body" style=" min-height:220px">
+              <h5 class="card-title text-center fs-4 ">{{$course->name}}</h5>
+              <p class="card-text text-muted">{{$course->detail}}</p>
+              @foreach ($tags as $tag)
+                  <a href="#" title="{{$tag}}">{{$tag}}</a>
+              @endforeach
             </div>
             <div class="d-flex flex-row card-body border-top justify-content-center d-none course-button">
-                <a href="#" class="btn btn-primary card-link flex-1">Card link</a>
-                <a href="#" class="btn btn-primary card-link flex-1">Card link</a>
+                
+                <a href="javascript:void(0)" class="btn btn-primary card-link flex-1">Kayıt Ol</a>
+                <a href="/courses/{{$course->id}}" class="btn btn-primary card-link flex-1">Detay</a>
             </div>
           </div>
     </div>
-
     
+    @endforeach
     
 </div>
 
