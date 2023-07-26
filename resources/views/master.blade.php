@@ -69,6 +69,7 @@
     <script src="/static/assets/js/main.min.js"></script>
     <script src="/static/assets/js/custom.js"></script>
     <script src="/static/assets/js/pages/dashboard.js"></script>
+    @yield('script')
     <script>
         /*
         $(".course-card").on("mouseenter", function(){

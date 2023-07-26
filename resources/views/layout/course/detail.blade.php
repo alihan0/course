@@ -113,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-4">
             <div class="col">
                 <div class="card todo-container">
                     
@@ -155,6 +155,40 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <div class="card todo-container">
+                    
+                    <div class="row">
+                       
+                        <div class="col-12">
+                            
+                            <div class="todo-list ps-5">
+                                <h5 class="card-title border-bottom pb-2 fs-4 mb-3">Yorum Yap</h5>
+                                <input type="hidden" id="comment" value="{{$course->id}}">
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message"  rows="4"></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3 col-6">
+                                        <select class="form-control" id="point">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="" selected>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 col-6">
+                                        <a href="javascript:void(0)" class="btn btn-primary" id="addComment">Yorum Yap</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
         
@@ -163,4 +197,23 @@
 </div>
 </div>
 </div>
+@endsection
+
+
+
+@section('script')
+    <script>
+        $("#addComment").on("click", function(){
+            var comment = $("#comment").val();
+            var message = $("#message").val();
+            var point = $("#point").val();
+
+            axios.post("/courses/add/comment", {comment:comment, message:message, point:point}).then((res) => {
+                toastr[res.data.type](res.data.message);
+                if(res.data.status){
+                    window.location.reload();
+                }
+            });
+        })
+    </script>
 @endsection
