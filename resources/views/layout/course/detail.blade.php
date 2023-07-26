@@ -116,32 +116,32 @@
         <div class="row">
             <div class="col">
                 <div class="card todo-container">
+                    
                     <div class="row">
                        
                         <div class="col-12">
+                            
                             <div class="todo-list ps-5">
+                                <h5 class="card-title border-bottom pb-2 fs-4">Yorumlar ({{$course->Comments->count()}})</h5>
                                 <ul class="list-unstyled">
+                                    
+                                    
+                                    @foreach ($course->Comments as $item)
                                     <li class="todo-item">
                                         <div class="todo-item-content">
-                                            <span class="todo-item-title">Walk the dog<span class="badge badge-style-light rounded-pill badge-warning">other</span></span>
-                                            <span class="todo-item-subtitle">Donec ultricies est vel tellus molestie volutpat. Duis at cursus risus.</span>
+                                            <span class="todo-item-title">{{$item->User->name}}<span class="badge badge-style-light rounded-pill badge-danger">
+                                                @for ($i = 0; $i < $item->point; $i++)
+                                                <i class="material-icons-two-tone fs-6">star</i>
+                                                @endfor
+                                            </span></span>
+                                            <span class="todo-item-subtitle mb-3">
+                                                {{$item->message}}
+                                            </span>
+                                            <sup class="text-muted mt-3">{{$item->created_at}}</sup>
                                         </div>
                                         
                                     </li>
-                                    <li class="todo-item">
-                                        <div class="todo-item-content">
-                                            <span class="todo-item-title">Reply to new mails from support team<span class="badge badge-style-light rounded-pill badge-primary">work</span></span>
-                                            <span class="todo-item-subtitle">Vestibulum ipsum nunc, lacinia sit amet egestas vitae, molestie quis nisi. Maecenas mi urna, ultricies non est a, commodo suscipit velit. Nullam tincidunt, magna sed scelerisque varius</span>
-                                        </div>
-                                        
-                                    </li>
-                                    <li class="todo-item">
-                                        <div class="todo-item-content">
-                                            <span class="todo-item-title">Watch UX/UI design course<span class="badge badge-style-light rounded-pill badge-danger">education</span><span class="badge badge-style-bordered badge-primary">IN PROGRESS</span></span>
-                                            <span class="todo-item-subtitle">Vivamus pharetra massa vitae elit pellentesque, sit amet convallis purus euismod</span>
-                                        </div>
-                                        
-                                    </li>
+                                    @endforeach
                                     
                                     
                                     
