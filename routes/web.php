@@ -37,4 +37,6 @@ Route::controller(AuthController::class)->prefix('auth')->group(function(){
 Route::controller(CourseController::class)->prefix('courses')->group(function(){
     Route::get('/', 'all');
     Route::get('/detail/{id}', 'detail');
+
+    Route::post('/add/comment', 'add_comment');
 });

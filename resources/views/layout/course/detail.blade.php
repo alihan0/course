@@ -165,18 +165,18 @@
                             
                             <div class="todo-list ps-5">
                                 <h5 class="card-title border-bottom pb-2 fs-4 mb-3">Yorum Yap</h5>
-                                <input type="hidden" id="comment" value="{{$course->id}}">
+                                <input type="hidden" id="course" value="{{$course->id}}">
                                 <div class="mb-3">
                                     <textarea class="form-control" id="message"  rows="4"></textarea>
                                 </div>
                                 <div class="row">
                                     <div class="mb-3 col-6">
                                         <select class="form-control" id="point">
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="" selected>5</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5" selected>5</option>
                                         </select>
                                     </div>
                                     <div class="mb-3 col-6">
@@ -204,11 +204,11 @@
 @section('script')
     <script>
         $("#addComment").on("click", function(){
-            var comment = $("#comment").val();
+            var course = $("#course").val();
             var message = $("#message").val();
             var point = $("#point").val();
 
-            axios.post("/courses/add/comment", {comment:comment, message:message, point:point}).then((res) => {
+            axios.post("/courses/add/comment", {course:course, message:message, point:point}).then((res) => {
                 toastr[res.data.type](res.data.message);
                 if(res.data.status){
                     window.location.reload();
