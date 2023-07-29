@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Courses;
 use App\Models\Comments;
+use App\Models\Favorites;
 
 use Auth;
 
@@ -46,6 +47,22 @@ class CourseController extends Controller
             }
         }
 
+        return $response;
+    }
+
+    public function add_favorite(Request $request){
+        $response = ["type" =>  "warning", "message" => null, "status" => false];
+        if($request->course){
+            $favorites = Favorites::where('course',$request->course)->where('user', Auth::user()->id)->first();
+            if(!$favorites){
+                $favori = new Favorites;
+                $favori->user = Auth::user()->id;
+                $favori->course = $request->course;
+                if($favori->save()){
+                    $response["status"] = true;
+                }
+            }
+        }
         return $response;
     }
 }

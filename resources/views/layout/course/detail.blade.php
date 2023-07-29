@@ -3,6 +3,7 @@
 @section('title', 'Kurs Detayları')
 
 @section('content')
+<input type="hidden" value="{{$course->id}}" id="course_id">
 <a href="#" class="content-menu-toggle btn btn-primary"><i class="material-icons">menu</i> content</a>
 <div class="content-menu content-menu-right">
     <ul class="list-unstyled">
@@ -26,8 +27,13 @@
                         <h1>{{$course->name}}</h1>
                     </div>
                     <div class="page-description-actions">
-                        <a href="#" class="btn btn-danger"><i class="material-icons">favorite</i>Beğen</a>
-                        <a href="#" class="btn btn-primary"><i class="material-icons">add</i>Kayıt Ol</a>
+
+                        @if ($course->Favorites)
+                            <a href="#" class="btn btn-danger" id="unFavoriteButton">Beğenmekten Vazgeç</a>
+                        @else
+                            <a href="#" class="btn btn-danger" id="favoriteButton"><i class="material-icons">favorite</i>Beğen</a>
+                        @endif
+                        <a href="#" class="btn btn-primary" id="subsButton"><i class="material-icons">add</i>Kayıt Ol</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +69,7 @@
                                             <i class="material-icons text-primary">favorite</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            {{$course->likes}}
+                                            
                                         </span>
                                     </a>
                                 </li>
@@ -214,6 +220,17 @@
                     window.location.reload();
                 }
             });
-        })
+        });
+
+        $("#favoriteButton").on("click", function(){
+            var course = $("#course_id").val();
+
+            axios.post("/courses/add/favorite", {course:course}).then((res)=>{
+                if(res.data.status){
+                    $(this).html("Beğenmekten Vazgeç");
+                    $(this).attr("id", "unFavoriteButton");
+                }
+            });
+        });
     </script>
 @endsection

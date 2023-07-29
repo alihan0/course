@@ -39,4 +39,5 @@ Route::controller(CourseController::class)->prefix('courses')->group(function(){
     Route::get('/detail/{id}', 'detail');
 
     Route::post('/add/comment', 'add_comment');
+    Route::post('/add/favorite', 'add_favorite');
 });
