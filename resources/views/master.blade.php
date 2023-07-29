@@ -25,7 +25,7 @@
     
     <!-- Theme Styles -->
     <link href="/static/assets/css/main.min.css" rel="stylesheet">
-    <link href="/static/assets/css/darktheme.css" rel="stylesheet">
+    
     <link href="/static/assets/css/custom.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/images/neptune.png" />
@@ -39,6 +39,7 @@
     <![endif]-->
 </head>
 <body>
+    
     <div class="app align-content-stretch d-flex flex-wrap">
         @include('src.sidebar')
         <div class="app-container">
@@ -74,11 +75,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     @yield('script')
     <script>
-        /*
-        $(".course-card").on("mouseenter", function(){
-            $(".course-button").removeClass('d-none');
-        }).on("mouseleave", function(){
-            $(".course-button").addClass('d-none');
+        $(document).on("click", "#dark_mode", function(){
+            $(this).html('<i class="material-icons-outlined">light_mode</i>')
+            $(this).attr("id", "light_mode")
+            $('body').prepend('<link href="/static/assets/css/darktheme.css" rel="stylesheet" id="dark-mode-style">');
+            document.cookie = "theme=dark";
+        });
+        $(document).on("click", "#light_mode", function(){
+            $(this).html('<i class="material-icons-outlined">dark_mode</i>')
+            $(this).attr("id", "dark_mode")
+            $("#dark-mode-style").remove();
+            document.cookie = "theme=light";
+        })
+
+        console.log(document.cookie);
+
+        $(document).ready(function(){
+            //document.cookie = "theme=light";
+
+            function getCookie(cname) {
+            let name = cname + "=";
+            let ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+            }
+
+            var theme = getCookie("theme");
+
+            if(theme === "dark"){
+                //alert("dark");
+                $('body').prepend('<link href="/static/assets/css/darktheme.css" rel="stylesheet" id="dark-mode-style">');
+                console.log("dark tema etkin")
+                document.cookie = "theme=dark";
+                
+                $("#theme-switcher a").html('<i class="material-icons-outlined">light_mode</i>')
+                $("#theme-switcher a").attr("id", "light_mode")
+            }else{
+                $("#dark-mode-style").remove();
+                console.log("light tema etkin")
+                document.cookie = "theme=light";
+            }
         })
     </script>
 </body>

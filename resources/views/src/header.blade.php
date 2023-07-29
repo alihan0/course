@@ -23,8 +23,8 @@
                 <li class="nav-item hidden-on-mobile">
                     <a class="nav-link" href="#">İletişim</a>
                 </li>
-                <li class="nav-item dropdown hidden-on-mobile">
-                    <a class="nav-link dropdown-toggle" href="#" id="dark_mode" role="button">
+                <li class="nav-item dropdown hidden-on-mobile" id="theme-switcher">
+                    <a class="nav-link" href="#" id="dark_mode" role="button">
                         <i class="material-icons-outlined">dark_mode</i>
                     </a>
                     
