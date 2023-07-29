@@ -6,74 +6,33 @@
                 <li class="nav-item">
                     <a class="nav-link hide-sidebar-toggle-button" href="#"><i class="material-icons">first_page</i></a>
                 </li>
-                <li class="nav-item dropdown hidden-on-mobile">
-                    <a class="nav-link dropdown-toggle" href="#" id="addDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="material-icons">add</i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="addDropdownLink">
-                        <li><a class="dropdown-item" href="#">New Workspace</a></li>
-                        <li><a class="dropdown-item" href="#">New Board</a></li>
-                        <li><a class="dropdown-item" href="#">Create Project</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown hidden-on-mobile">
-                    <a class="nav-link dropdown-toggle" href="#" id="exploreDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="material-icons-outlined">explore</i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-lg large-items-menu" aria-labelledby="exploreDropdownLink">
-                        <li>
-                            <h6 class="dropdown-header">Repositories</h6>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <h5 class="dropdown-item-title">
-                                    Neptune iOS
-                                    <span class="badge badge-warning">1.0.2</span>
-                                    <span class="hidden-helper-text">switch<i class="material-icons">keyboard_arrow_right</i></span>
-                                </h5>
-                                <span class="dropdown-item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <h5 class="dropdown-item-title">
-                                    Neptune Android
-                                    <span class="badge badge-info">dev</span>
-                                    <span class="hidden-helper-text">switch<i class="material-icons">keyboard_arrow_right</i></span>
-                                </h5>
-                                <span class="dropdown-item-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-                            </a>
-                        </li>
-                        <li class="dropdown-btn-item d-grid">
-                            <button class="btn btn-primary">Create new repository</button>
-                        </li>
-                    </ul>
-                </li>
+                
+                
             </ul>
 
         </div>
         <div class="d-flex">
             <ul class="navbar-nav">
+                
                 <li class="nav-item hidden-on-mobile">
-                    <a class="nav-link active" href="#">Applications</a>
+                    <a class="nav-link" href="#">S.S.S</a>
                 </li>
                 <li class="nav-item hidden-on-mobile">
-                    <a class="nav-link" href="#">Reports</a>
+                    <a class="nav-link" href="#">Yardım</a>
                 </li>
                 <li class="nav-item hidden-on-mobile">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#">İletişim</a>
+                </li>
+                <li class="nav-item dropdown hidden-on-mobile">
+                    <a class="nav-link dropdown-toggle" href="#" id="dark_mode" role="button">
+                        <i class="material-icons-outlined">dark_mode</i>
+                    </a>
+                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link toggle-search" href="#"><i class="material-icons">search</i></a>
                 </li>
-                <li class="nav-item hidden-on-mobile">
-                    <a class="nav-link language-dropdown-toggle" href="#" id="languageDropDown" data-bs-toggle="dropdown"><img src="/static/assets/images/flags/us.png" alt=""></a>
-                        <ul class="dropdown-menu dropdown-menu-end language-dropdown" aria-labelledby="languageDropDown">
-                            <li><a class="dropdown-item" href="#"><img src="/static/assets/images/flags/germany.png" alt="">German</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="/static/assets/images/flags/italy.png" alt="">Italian</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="/static/assets/images/flags/china.png" alt="">Chinese</a></li>
-                        </ul>
-                </li>
+                
                 <li class="nav-item hidden-on-mobile">
                     <a class="nav-link nav-notifications-toggle" id="notificationsDropDown" href="#" data-bs-toggle="dropdown">4</a>
                     <div class="dropdown-menu dropdown-menu-end notifications-dropdown" aria-labelledby="notificationsDropDown">
@@ -147,6 +106,17 @@
                         </div>
                     </div>
                 </li>
+                <li class="nav-item hidden-on-mobile"><div class="dropdown">
+                    <a class="nav-link mt-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      {{Auth::user()->name}}
+                    </a>
+                  
+                    <ul class="dropdown-menu" style="min-width:140px !important">
+                      <li><a class="dropdown-item" href="/profile">Profil</a></li>
+                      <li><a class="dropdown-item" href="/profile/settings">Ayarlar</a></li>
+                      <li><a class="dropdown-item" href="/auth/logout">Çıkış Yap</a></li>
+                    </ul>
+                  </div></li>
             </ul>
         </div>
     </div>
