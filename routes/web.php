@@ -40,6 +40,7 @@ Route::controller(CourseController::class)->prefix('courses')->group(function(){
 
     Route::post('/add/comment', 'add_comment');
     Route::post('/add/favorite', 'add_favorite');
+    Route::post('/add/sub', 'add_sub');
 
     Route::post('/remove/favorite', 'remove_favorite');
 });

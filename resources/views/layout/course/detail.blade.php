@@ -33,12 +33,18 @@
                         @else
                             <a href="#" class="btn btn-danger" id="favoriteButton"><i class="material-icons">favorite</i>Beğen</a>
                         @endif
-                        <a href="#" class="btn btn-primary" id="subsButton"><i class="material-icons">add</i>Kayıt Ol</a>
+
+                        @if ($course->mySubs->count() > 0)
+                            <button class="btn btn-primary" disabled><i class="material-icons">check</i>Kayıt Olundu</button>
+                        @else
+                            <button class="btn btn-primary" id="subsButton"><i class="material-icons">add</i>Kayıt Ol</button>
+                        @endif
+                        
                     </div>
                 </div>
             </div>
         </div>
-        
+        <div id="alert-row"></div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -208,7 +214,7 @@
 
 
 @section('script')
-    <script>
+    <script>        
         $("#addComment").on("click", function(){
             var course = $("#course").val();
             var message = $("#message").val();
@@ -240,6 +246,24 @@
                 if(res.data.status){
                     $(this).html('<i class="material-icons">favorite</i>Beğen');
                     $(this).attr("id", "favoriteButton");
+                }
+            });
+        });
+
+        $("#subsButton").on("click", function(){
+            var course = $("#course_id").val();
+
+            var success = '<div class="alert alert-success" role="alert">Bu kursa başarıyla kayıt oldunuz.</div>';
+
+            axios.post("/courses/add/sub", {course:course}).then((res)=>{
+                if(res.data.status){
+                    $(this).html('<i class="material-icons">check</i> Kayıt Olundu');
+                    $(this).attr("disabled", true);
+                    $("#alert-row").append(success);
+
+                    setInterval(() => {
+                        $("#alert-row").hide();
+                    }, 5000);
                 }
             });
         });

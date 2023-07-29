@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use App\Models\Comments;
 use App\Models\Favorites;
+use App\Models\Subs;
 
 use Auth;
 
@@ -25,5 +26,9 @@ class Courses extends Model
     }
     public function myFavorites(){
         return $this->hasMany(Favorites::class, 'course', 'id')->where('user', Auth::user()->id);
+    }
+
+    public function mySubs(){
+        return $this->hasMany(Subs::class, 'course', 'id')->where('user', Auth::user()->id);
     }
 }

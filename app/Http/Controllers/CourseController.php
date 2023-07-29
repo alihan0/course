@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Courses;
 use App\Models\Comments;
 use App\Models\Favorites;
+use App\Models\Subs;
 
 use Auth;
 
@@ -73,6 +74,22 @@ class CourseController extends Controller
             $favorites = Favorites::where('course',$request->course)->where('user', Auth::user()->id)->first();
             if($favorites){
                 if($favorites->delete()){
+                    $response["status"] = true;
+                }
+            }
+        }
+        return $response;
+    }
+
+    public function add_sub(Request $request){
+        $response = ["status" => false];
+        if($request->course){
+            $subs = Subs::where('course',$request->course)->where('user', Auth::user()->id)->first();
+            if(!$subs){
+                $sub = new Subs;
+                $sub->user = Auth::user()->id;
+                $sub->course = $request->course;
+                if($sub->save()){
                     $response["status"] = true;
                 }
             }
