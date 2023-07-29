@@ -4,6 +4,7 @@
 
 @section('content')
 <input type="hidden" value="{{$course->id}}" id="course_id">
+
 <a href="#" class="content-menu-toggle btn btn-primary"><i class="material-icons">menu</i> content</a>
 <div class="content-menu content-menu-right">
     <ul class="list-unstyled">
@@ -16,7 +17,19 @@
         <li><a href="#"><i class="material-icons">facebook</i>Facebookta Paylaş</a></li>
         <li><a href="#"><i class="material-icons">share</i>Kursu Tweetle</a></li>
         <li><a href="#"><i class="material-icons">send</i>E-posta Gönder</a></li>
+        <li class="divider"></li>
+        <li>
+            
+            @if($ads[count($ads) -1]->position == "SIDEBAR")
+            <a href="{{$ads[count($ads) -1]->url }}" target="_blank">
+                <img src="/static/assets/images/ads/{{$ads[count($ads) -1]->img }}" width="100%">
+            </a>
+            @endif
+            
+        </li>
     </ul>
+
+    
 </div>
 <div class="content-wrapper">
     <div class="container-fluid">

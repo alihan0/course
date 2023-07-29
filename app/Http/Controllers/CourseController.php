@@ -8,6 +8,7 @@ use App\Models\Courses;
 use App\Models\Comments;
 use App\Models\Favorites;
 use App\Models\Subs;
+use App\Models\Ads;
 
 use Auth;
 
@@ -24,7 +25,8 @@ class CourseController extends Controller
 
     public function detail($id){
         $course = Courses::find($id);
-        return view('layout.course.detail', ['course' => $course]);
+        $ads = Ads::where('page', 'COURSE_DETAIL')->where('status',1)->get();
+        return view('layout.course.detail', ['course' => $course, 'ads' => $ads]);
     }
 
     public function add_comment(Request $request){
