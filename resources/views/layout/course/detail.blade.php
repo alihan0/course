@@ -63,7 +63,7 @@
                                             <i class="material-icons text-primary">favorite</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            1.200
+                                            {{$course->likes}}
                                         </span>
                                     </a>
                                 </li>
@@ -73,7 +73,7 @@
                                             <i class="material-icons-outlined text-success">comment</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            5
+                                            {{$course->Comments->count()}}
                                         </span>
                                     </a>
                                 </li>
@@ -93,7 +93,7 @@
                                             <i class="material-icons text-info">video_library</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            5
+                                            {{$course->video_count}}
                                         </span>
                                     </a>
                                 </li>
@@ -103,7 +103,7 @@
                                             <i class="material-icons text-warning">access_alarm</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            50h
+                                            {{$course->total_time}} dk.
                                         </span>
                                     </a>
                                 </li>
