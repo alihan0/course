@@ -1,5 +1,5 @@
 body {
-    background-color: #181821;
+    background-color: #323242;
     color: #9a9cab;
 }
 
@@ -8,20 +8,20 @@ body {
 }
 
 .bg-white {
-    background-color: #1f1f2b!important;
+    background-color: #2b2b3d!important;
 }
 
 .app-sidebar,
 .menu-hover .app-menu {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app.sidebar-hidden .app-sidebar .logo.hidden-sidebar-logo {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app-sidebar .logo {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app-sidebar .logo-icon .logo-text {
@@ -45,11 +45,11 @@ body {
 
 @media (min-width: 1200px) {
     .menu-hover .app-menu ul>li>a+.sub-menu {
-        background-color: #1f1f2b;
+        background-color: #2b2b3d;
     }
 
     .menu-hover .app-menu ul>li>a+.sub-menu::after {
-        border-right-color: #1f1f2b;
+        border-right-color: #2b2b3d;
     }
 
     .menu-hover .app-menu ul>li>a+.sub-menu li a:hover,
@@ -71,11 +71,11 @@ body {
 }
 
 .app-header .navbar {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app-header::before {
-    background: linear-gradient( 180deg, rgba(31, 31, 43, .8) 0, #181821 40%, #181821 78%, rgba(31, 31, 43, 0) 100%);
+    background: linear-gradient( 180deg, rgba(31, 31, 43, .8) 0, #323242 40%, #323242 78%, rgba(31, 31, 43, 0) 100%);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -95,7 +95,7 @@ body {
 }
 
 .search {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .search input, .search input:focus {
@@ -107,7 +107,7 @@ body {
 }
 
 .card {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .card .card-title {
@@ -222,7 +222,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .bg-light {
-    background-color: #1f1f2b!important;
+    background-color: #2b2b3d!important;
 }
 
 .breadcrumb.breadcrumb-container {
@@ -252,7 +252,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .img-thumbnail {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
     border-color: #2d2d3f;
 }
 
@@ -315,7 +315,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .accordion-flush .accordion-item .accordion-button.collapsed {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .countdown-container .countdown {
@@ -339,7 +339,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .modal-content {
-    background: #1F1F2B;
+    background: #2b2b3d;
     color: #9a9cab;
 }
 
@@ -368,7 +368,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .form-select, .form-control, .form-control.form-control-solid-bordered {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
     border-color: #2d2d3f;
     color: #c2c4d1;
 }
@@ -386,7 +386,7 @@ table.dataTable td, table.dataTable th {
 
 .form-control:focus, .form-control.form-control-solid-bordered:focus {
     color: #c2c4d1;
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .form-control:disabled, .form-control[readonly] {
@@ -394,12 +394,12 @@ table.dataTable td, table.dataTable th {
 }
 
 *:not(.form-switch) > .form-check-input:not(:checked) {
-    background: #181821;
+    background: #323242;
     border: 1px solid #2d2d3f;
 }
 
 .form-range::-webkit-slider-runnable-track {
-    background-color: #181821;
+    background-color: #323242;
 }
 
 .dropzone {
@@ -440,7 +440,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .card-footer {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
     border-color: #2d2d3f;
 }
 
@@ -454,7 +454,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .mailbox-container .mailbox-list .mailbox-list-item.active a {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .mailbox-container .mailbox-list .mailbox-list-item .mailbox-list-item-content .mailbox-list-item-title {
@@ -586,7 +586,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .app-auth-container {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app-auth-container .logo a {
@@ -604,7 +604,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .widget-chat .widget-chat-messages-container .widget-chat-message-item .widget-chat-message-item-text {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .section-description-inline h1+span {
@@ -667,20 +667,20 @@ table.dataTable td, table.dataTable th {
 }
 
 .widget-chat .widget-chat-compose .widget-chat-compose-input {
-    background-color: #1F1F2B;
+    background-color: #2b2b3d;
 }
 .widget-chat .widget-chat-compose {
     border-top-color: #2D2D3F;
 }
 
 .app.menu-off-canvas .app-sidebar .logo {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .full-width-header .app-header .navbar,
 .app-sidebar .logo.logo-sm,
 .app.sidebar-hidden.full-width-header .app-sidebar .logo.hidden-sidebar-logo {
-    background-color: #1f1f2b;
+    background-color: #2b2b3d;
 }
 
 .app-sidebar .logo.logo-sm a {
@@ -688,7 +688,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .header-large .app-header {
-    background: #1f1f2b;
+    background: #2b2b3d;
 }
 
 .app-header .header-toolbar {
@@ -773,17 +773,17 @@ table.dataTable td, table.dataTable th {
 .alert.alert-custom .custom-alert-icon.icon-dark,
 .alert.alert-style-light.alert-dark,
 .badge.badge-style-light.badge-dark {
-    background: #181821;
+    background: #323242;
     color: #9598a6;
 }
 
 .widget-action-list .widget-action-list-container .widget-action-list-item a .widget-action-list-item-icon {
-    background: #181821;
+    background: #323242;
     border-color: #30303d;
 }
 
 .widget-stats .widget-stats-container .widget-stats-indicator {
-    background: #181821;
+    background: #323242;
 }
 
 .btn-style-light.btn-primary, 
@@ -864,7 +864,7 @@ table.dataTable td, table.dataTable th {
 .btn-style-light.btn-dark, 
 .btn-style-light.btn-dark.disabled, 
 .btn-style-light.btn-dark:disabled {
-    background: #181821;
+    background: #323242;
     color: #9598a6;
 }
 
@@ -879,7 +879,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .popover {
-    background: #181821;
+    background: #323242;
     border-color: #262635;
 }
 
@@ -900,29 +900,29 @@ table.dataTable td, table.dataTable th {
 }
 
 .bs-popover-auto[data-popper-placement^=right]>.popover-arrow::after, .bs-popover-end>.popover-arrow::after {
-    border-right-color: #181821;
+    border-right-color: #323242;
 }
 
 .bs-popover-auto[data-popper-placement^=top]>.popover-arrow::after, .bs-popover-top>.popover-arrow::after {
-    border-top-color: #181821;
+    border-top-color: #323242;
 }
 
 .bs-popover-auto[data-popper-placement^=bottom]>.popover-arrow::after, .bs-popover-bottom>.popover-arrow::after {
-    border-bottom-color: #181821;
+    border-bottom-color: #323242;
 }
 
 .bs-popover-auto[data-popper-placement^=left]>.popover-arrow::after, .bs-popover-start>.popover-arrow::after {
-    border-left-color: #181821;
+    border-left-color: #323242;
 }
 
 .popover-header {
-    background: #1f1f2b;
+    background: #2b2b3d;
     color: #c2c4d1;
     border-color: #262635;
 }
 
 .blockUI.blockOverlay {
-    background: #181821!important;
+    background: #323242!important;
 }
 
 /*  Horizontal Menu */
@@ -930,12 +930,12 @@ table.dataTable td, table.dataTable th {
 .horizontal-menu.app-auth-sign-in,
 .horizontal-menu.app-auth-sign-up,
 .horizontal-menu.app-auth-lock-screen {
-    background: #181821;
+    background: #323242;
 }
 
 .horizontal-menu .search,
 .horizontal-menu .app-header {
-    background-color: #181821;
+    background-color: #323242;
 }
 
 .horizontal-menu .search input:focus {
@@ -971,7 +971,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .horizontal-menu .app-menu .sub-menu {
-    background: #1f1f2b;
+    background: #2b2b3d;
     border-color: #262635;
 }
 
@@ -980,7 +980,7 @@ table.dataTable td, table.dataTable th {
 }
 
 .horizontal-menu .app-menu .sub-menu::after {
-    border-bottom-color: #1f1f2b;
+    border-bottom-color: #2b2b3d;
 }
 
 .horizontal-menu .app-menu .sub-menu .sub-menu::before {
@@ -988,11 +988,11 @@ table.dataTable td, table.dataTable th {
 }
 
 .horizontal-menu .app-menu .sub-menu .sub-menu::after {
-    border-right-color: #1f1f2b;
+    border-right-color: #2b2b3d;
 }
 
 .horizontal-menu .navbar .dropdown-menu {
-    background: #1f1f2b;
+    background: #2b2b3d;
     border-color: #262635;
 }
 
@@ -1001,13 +1001,13 @@ table.dataTable td, table.dataTable th {
 }
 
 .horizontal-menu .navbar .dropdown-menu::after {
-    border-bottom-color: #1f1f2b;
+    border-bottom-color: #2b2b3d;
 }
 
 @media (max-width: 1199px) {
     .horizontal-menu .search,
     .horizontal-menu .app-header {
-        background: #1f1f2b;
+        background: #2b2b3d;
     }
 
     .horizontal-menu .app-menu .sub-menu {

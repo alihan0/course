@@ -25,6 +25,7 @@
     
     <!-- Theme Styles -->
     <link href="/static/assets/css/main.min.css" rel="stylesheet">
+    <link href="/static/assets/css/darktheme.css" rel="stylesheet">
     <link href="/static/assets/css/custom.css" rel="stylesheet">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/images/neptune.png" />
