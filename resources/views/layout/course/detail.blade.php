@@ -28,7 +28,7 @@
                     </div>
                     <div class="page-description-actions">
 
-                        @if ($course->Favorites)
+                        @if ($course->myFavorites->count() > 0)
                             <a href="#" class="btn btn-danger" id="unFavoriteButton">Beğenmekten Vazgeç</a>
                         @else
                             <a href="#" class="btn btn-danger" id="favoriteButton"><i class="material-icons">favorite</i>Beğen</a>
@@ -69,7 +69,7 @@
                                             <i class="material-icons text-primary">favorite</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            
+                                            {{$course->Favorites->count()}}
                                         </span>
                                     </a>
                                 </li>
@@ -229,6 +229,17 @@
                 if(res.data.status){
                     $(this).html("Beğenmekten Vazgeç");
                     $(this).attr("id", "unFavoriteButton");
+                }
+            });
+        });
+
+        $("#unFavoriteButton").on("click", function(){
+            var course = $("#course_id").val();
+
+            axios.post("/courses/remove/favorite", {course:course}).then((res)=>{
+                if(res.data.status){
+                    $(this).html('<i class="material-icons">favorite</i>Beğen');
+                    $(this).attr("id", "favoriteButton");
                 }
             });
         });

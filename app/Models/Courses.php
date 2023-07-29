@@ -20,8 +20,10 @@ class Courses extends Model
     public function Comments(){
         return $this->hasMany(Comments::class, 'course','id');
     }
-
     public function Favorites(){
+        return $this->hasMany(Favorites::class, 'course', 'id');
+    }
+    public function myFavorites(){
         return $this->hasMany(Favorites::class, 'course', 'id')->where('user', Auth::user()->id);
     }
 }

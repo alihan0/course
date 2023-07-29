@@ -65,4 +65,18 @@ class CourseController extends Controller
         }
         return $response;
     }
+
+    public function remove_favorite(Request $request){
+        $response = ["status" => false];
+
+        if($request->course){
+            $favorites = Favorites::where('course',$request->course)->where('user', Auth::user()->id)->first();
+            if($favorites){
+                if($favorites->delete()){
+                    $response["status"] = true;
+                }
+            }
+        }
+        return $response;
+    }
 }
