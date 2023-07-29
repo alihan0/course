@@ -28,6 +28,11 @@ class Courses extends Model
         return $this->hasMany(Favorites::class, 'course', 'id')->where('user', Auth::user()->id);
     }
 
+    public function Subs(){
+        return $this->hasMany(Subs::class, 'course', 'id');
+    }
+
+
     public function mySubs(){
         return $this->hasMany(Subs::class, 'course', 'id')->where('user', Auth::user()->id);
     }

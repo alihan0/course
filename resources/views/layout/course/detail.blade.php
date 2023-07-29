@@ -95,7 +95,7 @@
                                             <i class="material-icons-outlined text-danger">shopping_basket</i>
                                         </span>
                                         <span class="widget-action-list-item-title">
-                                            250
+                                            {{$course->Subs->count()}}
                                         </span>
                                     </a>
                                 </li>
